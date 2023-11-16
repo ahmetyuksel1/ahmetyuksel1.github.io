@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+
+	<head>
+		<meta charset="UTF-8"/>
+		<meta http-equiv="X-UA-Comptaible" content="IE-edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta content="Ahmet Y«äksel Yaz©Ål©Åm Geli«ßtirici Jr. Software Developer Front-end Back-end HTML HTML5 CSS CSS3 JS Javascript C# .NET Core ASP EF Entity Framework SQL" name="keywords">
+		<meta content="Ahmet Y«äksel Software Developer" name="description">
+		
+		
+		<!--<link rel="stylesheet" href="style.css"/>-->
+		<link rel="icon" href="iconTNT.png"/>
+		<title>Ahmet YÃ¼ksel</title>
+
+		<style>
+
+            @import 'https://fonts.googleapis.com/css?family=Press+Start+2P';
+
+			body{
+
+				background-color: #252525;
+				background-size: 100%;
+				background-position: center;
+				color: white;
+				text-align: center;
+			}
+
+			.container{
+
+				width: 500px;
+				height: 300px;
+				margin: 200px auto;
+				display: flex;
+				justify-content: center;
+			 	align-items: center;
+				color: white;
+				font-size: 36px;
+                font-family: 'Press Start 2P', cursive;
+                
+			}
+
+			.glass{
+
+				background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+				backdrop-filter: blur(10px);
+				-webkit-backdrop-filter: blur(10px);
+				border-radius: 20px;
+				border:1px solid rgba(255, 255, 255, 0.18);
+				box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+			}
+			
+			a{
+			    text-decoration: none;
+			}
+
+		</style>
+			
+	</head>
+
+	<body onload="tarihSaat()">
+	    <a href="mailto:ahmetyuksel@ahmetyuksel.com"> 
+		<div class="container glass">
+
+			<p id="zaman">
+                    <script>
+                        function tarihSaat() 
+                        {
+                            var now = new Date();
+                            var optionsDate = { year: '2-digit', month: '2-digit', day: '2-digit', timeZone: 'Europe/Istanbul' };
+                            var optionsTime = { hour: '2-digit', minute: '2-digit', second: '2-digit', timeZone: 'Europe/Istanbul' };
+                            var formattedDate = now.toLocaleDateString('tr-TR', optionsDate);
+                            var formattedTime = now.toLocaleTimeString('tr-TR', optionsTime);
+                            document.getElementById('zaman').innerHTML = formattedDate + "<br/><br/><br/>" + formattedTime;
+                        }
+                        setInterval(tarihSaat, 1000); 
+                    </script>
+            </p>
+			
+		</div>
+		</a>
+        
+	</body>
+</html>

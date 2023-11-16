@@ -1,0 +1,86 @@
+.ust{
+    background: #232323;
+}
+#logo{
+    float: left;
+    width: 260px;
+    margin-top: 7px;
+    margin-left: 10px;
+}
+
+#logo h1{
+    margin: 0;
+    padding: 0;
+    font-size: 42px;
+    text-transform: uppercase;
+    
+}
+
+#logo h1 a{
+    font-family: Georgia;
+    text-decoration: none;
+    color: #DBDBDB;
+    letter-spacing: 3px;
+}
+
+#logo h1 a:hover{
+    font-family: Georgia;
+    text-decoration: none;
+    color: #FDC609;
+    letter-spacing: 3px;
+}
+
+#logo p{
+    color: #DBDBDB;
+    font-family: Georgia;
+    margin-left: 3px;
+    margin-top: 0;
+    padding-top: 0;
+    letter-spacing: 2px;
+}
+
+#logo p:hover{
+    color: #FDC609;
+    font-family: Georgia;
+    margin-left: 3px;
+    margin-top: 0;
+    padding-top: 0;
+    letter-spacing: 2px;
+}
+
+#menu{
+    float: right;
+    width: 650px;
+    margin: 30px 0 0 0;
+    padding: 0;
+    font-size: 13px;
+    text-align: right;
+}
+
+#menu ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#menu ul li{
+    display: inline;
+    margin-right: 35px;
+}
+
+#menu ul li a{
+    padding: 10px;
+    text-decoration: none;
+    font-size: 13px;
+    font-family: Verdana;
+    color: #DBDBDB;
+}
+
+#menu ul li a:hover {
+    background-color: #FDC609;
+    color: #232323;
+  }
+  
+  clear{
+    clear: both;
+}
