@@ -15,16 +15,17 @@
   $contact->from_email = $_POST['email'];
   $contact->subject = $_POST['subject'];
 
-  $contact->smtp = array(
-    'host' => 'ahmetyuksel.com',
-    'username' => 'ahm3a6ukselcom_admin',
-    'password' => '1248729214841436514363636',
-    'port' => '587'
-  );
-
   $contact->add_message( $_POST['name'], 'From');
   $contact->add_message( $_POST['email'], 'Email');
   $contact->add_message( $_POST['message'], 'Message', 10);
 
-  echo $contact->send();
+  $mail_subject = $contact->subject;
+  $mail_message = $contact->message;
+  $mail_headers = "From: " . $contact->from_name . " <" . $contact->from_email . ">\r\n";
+  $mail_headers .= "Reply-To: " . $contact->from_email . "\r\n";
+  $mail_headers .= "Content-Type: text/plain;charset=utf-8\r\n";
+
+  $mail_sent = mail($contact->to, $mail_subject, $mail_message, $mail_headers);
+
+  echo json_encode(array('success' => $mail_sent));
 ?>
