@@ -156,9 +156,3 @@
   new PureCounter();
 
 })()
-
-function showResponse() {
-  var mesajSpan = document.getElementById("responseSpan");
-
-  mesajSpan.innerHTML = "Your mail has been send.";
-}
