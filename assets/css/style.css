@@ -827,7 +827,3 @@ section .container {
 .credits a:hover {
   color: #fff;
 }
-
-#secret {
-  display: none;
-}
