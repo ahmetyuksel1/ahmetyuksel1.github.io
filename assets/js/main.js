@@ -156,3 +156,10 @@
   new PureCounter();
 
 })()
+
+function showResponse() {
+  var sended = document.getElementById("sended");
+
+  sended.innerHTML = "Your mail has been sended.";
+  return true;
+}
