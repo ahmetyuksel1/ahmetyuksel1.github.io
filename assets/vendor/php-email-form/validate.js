@@ -52,10 +52,10 @@
     })
     .then(response => {
       if( response.ok ) {
-        return response.text();
+        // return response.text();
+        return 'HELLO WORLD';
       } else {
-        // throw new Error(`${response.status} ${response.statusText} ${response.url}`);
-        throw new Error('YOUR MAIL HAS BEEN SEND.');
+        throw new Error(`${response.status} ${response.statusText} ${response.url}`); 
       }
     })
     .then(data => {
