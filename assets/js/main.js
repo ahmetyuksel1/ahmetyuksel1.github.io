@@ -156,10 +156,3 @@
   new PureCounter();
 
 })()
-
-function showResponse() {
-  var sended = document.getElementById("sended");
-
-  sended.innerHTML = "Your mail has been sended. Don't mind the red thing.";
-  return true;
-}
