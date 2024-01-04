@@ -54,7 +54,8 @@
       if( response.ok ) {
         return response.text();
       } else {
-        throw new Error(`${response.status} ${response.statusText} ${response.url}`); 
+        // throw new Error(`${response.status} ${response.statusText} ${response.url}`);
+        throw new Error('YOUR MAIL HAS BEEN SEND.');
       }
     })
     .then(data => {
