@@ -53,7 +53,7 @@
     .then(response => {
       if( response.ok ) {
         // return response.text();
-        return 'HELLO WORLD';
+        return 'DO NOT WORRY. YOUR EMAIL HAS BEEN SENT.';
       } else {
         throw new Error(`${response.status} ${response.statusText} ${response.url}`); 
       }
