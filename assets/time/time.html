@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Comptaible" content="IE-edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta content="Full Stack .NET Developer Ahmet Yüksel" name="description">
+	<meta
+		content="HTML CSS JavaScript jQuery Bootstrap ASP .NET Core MVC MS SQL Entity Framework Console Windows Forms Front-end Back-end Jr. Full Stack .NET Developer Yazılım Geliştirici"
+		name="keywords">
+
+	<link rel="icon" href="icon.gif" type="image/gif" />
+	<title>Ahmet Yüksel</title>
+
+	<style>
+		@import 'https://fonts.googleapis.com/css?family=Press+Start+2P';
+
+		body,
+		html {
+			height: 100%;
+			margin: 0;
+			background-image: url("bg.png");
+			background-size: cover;
+		}
+
+		a {
+			text-decoration: none;
+			color: white;
+		}
+
+		.container {
+			display: grid;
+			height: 100vh;
+		}
+
+		.content {
+			width: 90%;
+			height: 90%;
+
+			padding-top: 0.8%;
+
+			place-self: center;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			font-family: 'Press Start 2P', cursive;
+			font-size: 10vw;
+			text-align: center;
+		}
+
+		@keyframes shadow-change {
+			0% {
+				text-shadow: 0 0 0.1em red;
+			}
+
+			50% {
+				text-shadow: 0 0 0.1em green;
+			}
+
+			100% {
+				text-shadow: 0 0 0.1em blue;
+			}
+		}
+
+		#zaman {
+			animation: shadow-change 6s infinite alternate;
+		}
+
+		.glass {
+			background: linear-gradient(135deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+
+			backdrop-filter: blur(0.05em);
+
+			-webkit-backdrop-filter: blur(0.625em);
+
+			border-radius: 0.5em;
+		}
+
+		@keyframes border-and-box-shadow-change {
+			0% {
+				background: linear-gradient(135deg, rgba(255, 0, 0, 0.05), rgba(255, 0, 0, 0.05));
+				border: 0.15em solid rgba(255, 0, 0, 0.1);
+				box-shadow: 0em 0em 0.1em 0.01em red;
+			}
+
+			50% {
+				background: linear-gradient(135deg, rgba(0, 128, 0, 0.05), rgba(0, 128, 0, 0.05));
+				border: 0.15em solid rgba(0, 128, 0, 0.1);
+				box-shadow: 0em 0em 0.1em 0.01em green;
+			}
+
+			100% {
+				background: linear-gradient(135deg, rgba(0, 0, 255, 0.05), rgba(0, 0, 255, 0.05));
+				border: 0.15em solid rgba(0, 0, 255, 0.1);
+				box-shadow: 0em 0em 0.1em 0.01em blue;
+			}
+		}
+
+		.glass {
+			animation: border-and-box-shadow-change 6s infinite alternate;
+		}
+	</style>
+
+</head>
+
+<body onload="tarihSaat()">
+
+	<div class="container">
+		<div class="content glass zaman">
+			<a href="mailto:iletisim@ahmetyuksel.com">
+				<p id="zaman">
+					<script>
+						function tarihSaat() {
+							var simdi = new Date();
+							var gunAyari = { year: '2-digit', month: '2-digit', day: '2-digit', timeZone: 'Europe/Istanbul' };
+							var saatAyari = { hour: '2-digit', minute: '2-digit', second: '2-digit', timeZone: 'Europe/Istanbul' };
+							var gunTuru = simdi.toLocaleDateString('tr-TR', gunAyari);
+							var saatTuru = simdi.toLocaleTimeString('tr-TR', saatAyari);
+							document.getElementById('zaman').innerHTML = gunTuru + "<br/><br/>" + saatTuru;
+						}
+						setInterval(tarihSaat, 1000);
+
+						const img = document.createElement("img");
+						img.src = "icon.gif";
+						img.style.width = "128px";
+						img.style.height = "128px";
+						document.head.appendChild(img);
+					</script>
+
+					<script>
+						setTimeout(() => {
+							let faviconVideoImageCounter = 0;
+							const faviconVideoIconTag = document.querySelector("link[rel='icon']");
+							const faviconVideoImages = [
+								"blue.png", "green.png", "red.png", "green.png"
+							];
+
+							setInterval(() => {
+								if (faviconVideoImages[faviconVideoImageCounter]) {
+									faviconVideoIconTag.href = faviconVideoImages[faviconVideoImageCounter];
+								}
+								faviconVideoImageCounter = (faviconVideoImageCounter + 1) % faviconVideoImages.length;
+							}, 3000);
+						}, 1000);
+						
+					</script>
+				</p>
+			</a>
+		</div>
+	</div>
+
+</body>
+
+</html>
